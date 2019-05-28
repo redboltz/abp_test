@@ -12,12 +12,15 @@ pool:
 steps:
 - script: |
     ls C:\
-    ls "C:\Program Files\Boost\1.69.0"
+    echo "---"
+    ls "C:\Program Files\Boost\1.69.0\libs"
+    echo "---"
+    ls "C:\Program Files\Boost\1.69.0\lib"
+    echo "---"
     set
-    dir %%BOOST_ROOT%%
-    ls %%BOOST_ROOT%%
-    dir $BOOST_ROOT
-    ls $BOOST_ROOT
+    echo "---"
+    ls %BOOST_ROOT%
+    echo "---"
   displayName: 'explore tree'
 
 - script: |
