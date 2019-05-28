@@ -11,6 +11,16 @@ pool:
 
 steps:
 - script: |
+    ls C:\
+    echo "---"
+    DIR "C:\Program Files\"
+    echo "---"
+    DIR "C:\Program Files(x86)\"
+    echo "---"
+    set
+  displayName: 'printenv'
+  
+- script: |
     mkdir tmp
     bitsadmin.exe /TRANSFER htmlget https://www.openssl.org/source/openssl-1.1.1b.tar.gz tmp
     tar xzf openssl-1.1.1b.tar.gz
