@@ -11,9 +11,7 @@ pool:
 
 steps:
 - script: |
-    set
-    cd "C:\Program Files\Boost\1.69.0\"
-    tree
+    DIR %BOOST_ROOT%
   displayName: 'explore tree'
 
 - script: |
