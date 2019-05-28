@@ -11,7 +11,8 @@ pool:
 
 steps:
 - script: |
-    bitsadmin.exe /TRANSFER openssl https://www.openssl.org/source/openssl-1.1.1b.tar.gz .
+    mkdir tmp
+    bitsadmin.exe /TRANSFER htmlget https://www.openssl.org/source/openssl-1.1.1b.tar.gz tmp
     tar xzf openssl-1.1.1b.tar.gz
     cd openssl-1.1.1b
     make
