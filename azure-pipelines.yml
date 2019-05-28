@@ -11,7 +11,11 @@ pool:
 
 steps:
 - script: |
-    DIR %BOOST_ROOT%
+    set
+    dir %%BOOST_ROOT%%
+    ls %%BOOST_ROOT%%
+    dir $BOOST_ROOT
+    ls $BOOST_ROOT
   displayName: 'explore tree'
 
 - script: |
