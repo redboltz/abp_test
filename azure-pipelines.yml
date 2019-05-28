@@ -23,4 +23,5 @@ steps:
     mkdir build
     cd build
     cmake ..
+    cmake --build . --config Release
   displayName: 'cmake test'
