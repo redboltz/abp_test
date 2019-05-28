@@ -17,6 +17,8 @@ steps:
     echo "---"
     DIR "C:\Program Files(x86)\"
     echo "---"
+    DIR C":\Program Files\Git\usr\"
+    echo "---"
     set
   displayName: 'printenv'
   
