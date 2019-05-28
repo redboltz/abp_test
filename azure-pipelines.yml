@@ -23,9 +23,9 @@ steps:
 - script: |
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     cd openssl
-    perl Configure
-    nmake
-    nmake install
+    perl Configure VC-WIN32
+    make
+    make install
   displayName: 'install openssl'
     
 - script: |
