@@ -13,8 +13,9 @@ steps:
 - script: |
     ls C:\
     echo "---"
-    ls "C:\Program Files\"
+    DIR "C:\Program Files\"
     echo "---"
+    DIR C:\Program Files\
   displayName: 'explore tree'
 
 - script: |
