@@ -19,6 +19,16 @@ steps:
     echo "---"
     DIR C":\Program Files\Git\usr\"
     echo "---"
+    DIR C":\Program Files\Git\usr\etc"
+    echo "---"
+    DIR C":\Program Files\Git\usr\lib"
+    echo "---"
+    DIR C":\Program Files\Git\usr\libexec"
+    echo "---"
+    DIR C":\Program Files\Git\usr\share"
+    echo "---"
+    DIR C":\Program Files\Git\usr\ssl"
+    echo "---"
     set
   displayName: 'printenv'
   
