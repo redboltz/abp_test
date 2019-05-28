@@ -10,7 +10,7 @@ pool:
   vmImage: 'vs2017-win2016'
 
 steps:
-- script |
+- script: |
     cd "C:\Program Files\Boost\1.69.0\"
     tree
   displayName: 'explore tree'
