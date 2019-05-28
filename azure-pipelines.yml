@@ -10,14 +10,8 @@ pool:
   vmImage: 'vs2017-win2016'
 
 steps:
-- script: echo Hello, world!
-          echo Hello, world2!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- script: tree C:\Program Files\Boost\1.69.0\
+  displayName: 'explore tree'
 
 - script: |
     mkdir build
