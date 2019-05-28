@@ -12,6 +12,7 @@ pool:
 steps:
 - script: |
     ls C:\
+    ls "C:\Program Files\Boost\1.69.0"
     set
     dir %%BOOST_ROOT%%
     ls %%BOOST_ROOT%%
