@@ -19,7 +19,7 @@ steps:
     echo "---"
     set
     echo "---"
-    ls %BOOST_ROOT%
+    ls "%BOOST_ROOT%/lib"
     echo "---"
   displayName: 'explore tree'
 
