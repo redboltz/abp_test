@@ -13,13 +13,7 @@ steps:
 - script: |
     ls C:\
     echo "---"
-    ls "C:\Program Files\Boost\1.69.0\libs"
-    echo "---"
-    ls "C:\Program Files\Boost\1.69.0\lib"
-    echo "---"
-    set
-    echo "---"
-    ls "%BOOST_ROOT%/lib"
+    ls "C:\Program Files\"
     echo "---"
   displayName: 'explore tree'
 
