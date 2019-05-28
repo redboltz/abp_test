@@ -21,10 +21,8 @@ steps:
   displayName: 'printenv'
   
 - script: |
-    mkdir tmp
-    bitsadmin.exe /TRANSFER htmlget https://www.openssl.org/source/openssl-1.1.1b.tar.gz tmp
-    tar xzf openssl-1.1.1b.tar.gz
-    cd openssl-1.1.1b
+    git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
+    cd openssl
     make
     make install
   displayName: 'install openssl'
