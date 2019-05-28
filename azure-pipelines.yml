@@ -13,9 +13,8 @@ steps:
 - script: |
     ls C:\
     echo "---"
-    DIR "C:\Program Files\"
     echo "---"
-    DIR C:\Program Files\
+    DIR C:\Program Files\OpenSSL
   displayName: 'explore tree'
 
 - script: |
