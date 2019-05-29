@@ -11,7 +11,7 @@ pool:
 
 steps:
 - script: |
-    Get-ChildItem C:\*openssl* -recurse
+    find C:\ -name "*openssl*"
   displayName: 'openssl search'
 
 - script: |
