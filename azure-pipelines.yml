@@ -35,8 +35,11 @@ steps:
 - script: |
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     cd openssl
+    echo *** configure **
     perl Configure VC-WIN32 no-asm
+    echo *** make **
     make
+    echo *** make install **
     make install
   displayName: 'install openssl'
     
