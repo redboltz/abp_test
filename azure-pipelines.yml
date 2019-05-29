@@ -12,6 +12,7 @@ pool:
 steps:
 - script: |
     echo "---"
+    cmd /C "find 'C:\/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/SDK/ScopeCppSDK/VC/include/' -name stdlib.h"
     set
   displayName: 'printenv'
   
