@@ -9,12 +9,6 @@ trigger:
 pool:
   vmImage: 'vs2017-win2016'
 
-steps:
-- script: |
-    find C:\ -name "*openssl*"
-  displayName: 'openssl search'
-
-
 - script: |
     ls C:\
     echo "---"
@@ -40,7 +34,7 @@ steps:
 - script: |
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     cd openssl
-    perl Configure VC-WIN32
+    perl Configure VC-WIN32 no-asm --prefix=C:\Build_OpenSSL_VC_32
     make
     make install
   displayName: 'install openssl'
@@ -48,14 +42,9 @@ steps:
 - script: |
     ls C:\
     echo "---"
-    DIR "C:\Program Files\OpenSSL"
+    DIR "C:\Build_OpenSSL_VC_32"
     echo "---"
     set
   displayName: 'explore tree'
 
-- script: |
-    mkdir build
-    cd build
-    cmake ..
-    cmake --build . --config Release
   displayName: 'cmake test'
