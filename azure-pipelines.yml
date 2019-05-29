@@ -17,7 +17,8 @@ steps:
   displayName: 'printenv'
   
 - script: |
-    set PATH=C:\/Strawberry/perl/bin;C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin;%PATH%
+    #set PATH=C:\/Strawberry/perl/bin;C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin;%PATH%
+    set PATH=C:\/Strawberry/perl/bin;C:\/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/SDK/ScopeCppSDK/VC/bin/;%PATH%
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     cd openssl
     echo *** configure **
