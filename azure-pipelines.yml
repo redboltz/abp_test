@@ -23,6 +23,9 @@ steps:
     cd openssl
     echo *** configure **
     #perl.exe Configure VC-WIN32 no-asm
+    ./Configure --prefix=$PWD/dist no-idea no-mdc2 no-rc5 shared mingw64
+    echo *** make depend**
+    make depend
     echo *** make **
     make
     echo *** make install **
