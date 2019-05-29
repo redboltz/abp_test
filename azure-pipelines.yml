@@ -12,6 +12,8 @@ pool:
 steps:
 - script: |
     echo "---"
+    find C:\ -name "nmake.exe"
+    echo "---"
     set
   displayName: 'printenv'
   
