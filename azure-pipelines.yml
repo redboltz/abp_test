@@ -12,7 +12,8 @@ pool:
 steps:
 - script: |
     echo "---"
-    cmd /C "find 'C:/Program Files (x86)' -name stdlib.h"
+    #cmd /C "find 'C:/Program Files (x86)' -name stdlib.h"
+    cmd /C "where /R C:\Program Files (x86) -name stdlib.h"
     set
   displayName: 'printenv'
   
