@@ -14,8 +14,6 @@ steps:
     DIR "C:\Program Files\"
     echo "---"
     DIR "C:\Program Files(x86)\"
-    
-- script: |
     echo "---"
     find "C:\Program Files\" -name perl.exe
     echo "---"
