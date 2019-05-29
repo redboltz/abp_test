@@ -12,7 +12,7 @@ pool:
 steps:
 - script: |
     echo "---"
-    find C:\ -name "limits.h"
+    cmd /C "find C:\/Program Files (x86)/Microsoft Visual Studio/ -name limits.h"
     echo "---"
     set
   displayName: 'printenv'
