@@ -17,14 +17,15 @@ steps:
   displayName: 'printenv'
   
 - script: |
+    set PATH=C:\/Strawberry/perl/bin;C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin;%PATH%
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     cd openssl
     echo *** configure **
-    C:\/Strawberry/perl/bin/perl.exe Configure VC-WIN32 no-asm
+    perl.exe Configure VC-WIN32 no-asm
     echo *** make **
-    cmd /C "C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe"
+    nmake.exe
     echo *** make install **
-    cmd /C "C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe install"
+    nmake.exe install
   displayName: 'install openssl'
     
 - script: |
