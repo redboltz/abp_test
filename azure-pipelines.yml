@@ -11,6 +11,10 @@ pool:
 
 steps:
 - script: |
+    Get-ChildItem C:\*openssl* -recurse
+  displayName: 'openssl search'
+
+- script: |
     ls C:\
     echo "---"
     DIR "C:\Program Files\"
