@@ -35,7 +35,7 @@ steps:
 - script: |
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     cd openssl
-    perl Configure VC-WIN32 no-asm --prefix=C:/tmp/openssl
+    perl Configure VC-WIN32 no-asm
     make
     make install
   displayName: 'install openssl'
