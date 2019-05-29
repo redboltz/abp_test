@@ -11,13 +11,12 @@ pool:
 
 steps:
 - script: |
-    DIR "C:\Program Files\"
     echo "---"
-    DIR "C:\Program Files(x86)\"
+    find C:\ -name perl.exe
     echo "---"
-    find C:\Program Files\ -name perl.exe
+    find C:\ -name wget.exe
     echo "---"
-    find C:\Program Files(x86)\ -name perl.exe
+    find C:\ -name curl.exe
     echo "---"
     set
   displayName: 'printenv'
