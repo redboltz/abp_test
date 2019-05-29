@@ -11,23 +11,15 @@ pool:
 
 steps:
 - script: |
-    ls C:\
-    echo "---"
     DIR "C:\Program Files\"
     echo "---"
     DIR "C:\Program Files(x86)\"
+    
+- script: |
     echo "---"
-    DIR C":\Program Files\Git\usr\"
+    find "C:\Program Files\" -name perl.exe
     echo "---"
-    DIR C":\Program Files\Git\usr\etc"
-    echo "---"
-    DIR C":\Program Files\Git\usr\lib"
-    echo "---"
-    DIR C":\Program Files\Git\usr\libexec"
-    echo "---"
-    DIR C":\Program Files\Git\usr\share"
-    echo "---"
-    DIR C":\Program Files\Git\usr\ssl"
+    find "C:\Program Files(x86)\" -name perl.exe
     echo "---"
     set
   displayName: 'printenv'
