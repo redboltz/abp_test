@@ -15,9 +15,9 @@ steps:
     echo "---"
     DIR "C:\Program Files(x86)\"
     echo "---"
-    find "C:\Program Files\" -name perl.exe
+    find C:\Program Files\ -name perl.exe
     echo "---"
-    find "C:\Program Files(x86)\" -name perl.exe
+    find C:\Program Files(x86)\ -name perl.exe
     echo "---"
     set
   displayName: 'printenv'
