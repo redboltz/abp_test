@@ -48,4 +48,9 @@ steps:
     set
   displayName: 'explore tree'
 
+- script: |	
+    mkdir build	
+    cd build	
+    cmake ..	
+    cmake --build . --config Release
   displayName: 'cmake test'
