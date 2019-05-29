@@ -12,12 +12,6 @@ pool:
 steps:
 - script: |
     echo "---"
-    find C:\ -name perl.exe
-    echo "---"
-    find C:\ -name wget.exe
-    echo "---"
-    find C:\ -name curl.exe
-    echo "---"
     set
   displayName: 'printenv'
   
@@ -25,7 +19,7 @@ steps:
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     cd openssl
     echo *** configure **
-    perl Configure VC-WIN32 no-asm
+    C:\/Strawberry/perl/bin/perl.exe Configure VC-WIN32 no-asm
     echo *** make **
     make
     echo *** make install **
