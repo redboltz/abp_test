@@ -22,9 +22,9 @@ steps:
     echo *** configure **
     C:\/Strawberry/perl/bin/perl.exe Configure VC-WIN32 no-asm
     echo *** make **
-    C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe
+    cmd /C "C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe"
     echo *** make install **
-    C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe install
+    cmd /C "C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe install"
   displayName: 'install openssl'
     
 - script: |
