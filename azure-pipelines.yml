@@ -12,7 +12,6 @@ pool:
 steps:
 - script: |
     echo "---"
-    find C:\ -name "nmake.exe"
     echo "---"
     set
   displayName: 'printenv'
@@ -23,9 +22,9 @@ steps:
     echo *** configure **
     C:\/Strawberry/perl/bin/perl.exe Configure VC-WIN32 no-asm
     echo *** make **
-    make
+    C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe
     echo *** make install **
-    make install
+    C:\/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe install
   displayName: 'install openssl'
     
 - script: |
