@@ -17,7 +17,7 @@ steps:
   
 - script: |
     #set PATH=C:/Strawberry/perl/bin;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin;%PATH%
-    set INCLUDE=C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/SDK/ScopeCppSDK/VC/include/;C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/SDK/ScopeCppSDK/VC/include/ucrt
+    set INCLUDE=C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/SDK/ScopeCppSDK/VC/include/;C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/SDK/ScopeCppSDK/SDK/include/ucrt/
     set PATH=C:/Strawberry/perl/bin;C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/SDK/ScopeCppSDK/VC/bin/;%PATH%
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     cd openssl
