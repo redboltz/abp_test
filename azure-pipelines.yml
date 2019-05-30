@@ -34,13 +34,13 @@ steps:
 - script: |
     #set PATH=C:/Strawberry/perl/bin;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin;%PATH%
     set INCLUDE=C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\cppwinrt\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\winrt;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include
-    set LIB=C:\Program Files (x86)\Windows Kits\10\Lib\10.0.17763.0\um\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\lib\x64\store;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.17763.0\ucrt\x64
+    set LIB=C:\Program Files (x86)\Windows Kits\10\Lib\10.0.17763.0\um\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.17763.0\ucrt\x64
     set PATH=C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64;C:/Strawberry/c/x86_64-w64-mingw32/bin;C:/Strawberry/perl/bin;C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/SDK/ScopeCppSDK/VC/bin/;%PATH%
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     cd openssl
     echo *** configure **
-    perl.exe Configure VC-WIN64A no-asm
-    #perl Configure --prefix=$PWD/dist no-idea no-mdc2 no-rc5 shared mingw64
+    perl.exe Configure VC-WIN64A no-asm static
+    #perl Configure --prefix=$PWD/dist no-idea no-mdc2 no-rc5 static
     echo *** make depend**
     nmake depend
     echo *** make **
