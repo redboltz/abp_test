@@ -12,6 +12,18 @@ pool:
 steps:
 - script: |
     echo "---"
+    DIR "C:\Program Files (x86)"
+    echo "---"
+    DIR "C:\Program Files (x86)\Windows Kits"
+    echo "---"
+    DIR "C:\Program Files (x86)\Windows Kits\10"
+    echo "---"
+    DIR "C:\Program Files (x86)\Windows Kits\10\Include\"
+    echo "---"
+    DIR "C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\"
+    echo "---"
+    DIR "C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um"
+    echo "---"
     set
   displayName: 'printenv'
   
