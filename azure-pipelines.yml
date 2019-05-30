@@ -39,8 +39,8 @@ steps:
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     cd openssl
     echo *** configure **
-    perl.exe Configure VC-WIN64A no-asm static
-    #perl Configure --prefix=$PWD/dist no-idea no-mdc2 no-rc5 static
+    perl.exe Configure VC-WIN64A no-idea no-mdc2 no-rc5
+    #perl Configure --prefix=$PWD/dist no-idea no-mdc2 no-rc5
     echo *** make depend**
     nmake depend
     echo *** make **
