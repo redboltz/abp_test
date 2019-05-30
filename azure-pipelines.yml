@@ -25,11 +25,11 @@ steps:
     perl.exe Configure VC-WIN64A no-asm
     #perl Configure --prefix=$PWD/dist no-idea no-mdc2 no-rc5 shared mingw64
     echo *** make depend**
-    make depend
+    nmake depend
     echo *** make **
-    make
+    nmake
     echo *** make install **
-    make install
+    nmake install
   displayName: 'install openssl'
     
 - script: |
