@@ -35,7 +35,12 @@ steps:
 - script: |
     git clone https://github.com/curl/curl.git -b curl-7_65_0 
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
-    .\curl\projects\build-openssl.bat vc14.1 x64 debug .\openssl\ -perlpath C:\Strawberry
+    .\curl\projects\build-openssl.bat vc14.16 x64 debug .\openssl\ -perlpath C:\Strawberry
+    DIR .\openssl\build\
+    DIR .\openssl\build\Win32\VC14.16\LIB Release\
+    DIR .\openssl\build\Win32\VC14.16\LIB Debug\
+    DIR .\openssl\build\Win64\VC14.16\LIB Release\
+    DIR .\openssl\build\Win64\VC14.16\LIB Debug\
   displayName: 'install openssl'
     
 - script: |
