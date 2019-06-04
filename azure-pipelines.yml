@@ -6,10 +6,27 @@
 trigger:
 - master
 
+strategy:
+  matrix:
+    p1:
+       VAL1: "A"
+       VAL2: "B"
+    p2:
+       VAL1: "C"
+       VAL2: "D"
+
 pool:
   vmImage: 'vs2017-win2016'
 
 steps:
+- script: |
+    echo VAL1
+    echo VAL2
+    echo %VAL1%
+    echo %VAL2%
+  displayName: 'print matrix'
+
+
 - script: |
     echo "---"
     DIR "C:\Program Files (x86)"
@@ -33,14 +50,9 @@ steps:
 
 # https://github.com/Azure/azure-storage-cpplite  
 - script: |
-    git clone https://github.com/curl/curl.git -b curl-7_65_0 
-    git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
-    .\curl\projects\build-openssl.bat vc14.1 x64 debug .\openssl\ -perlpath C:\Strawberry
-    DIR .\openssl\build\
-    DIR .\openssl\build\Win32\VC14.16\LIB Release\
-    DIR .\openssl\build\Win32\VC14.16\LIB Debug\
-    DIR .\openssl\build\Win64\VC14.16\LIB Release\
-    DIR .\openssl\build\Win64\VC14.16\LIB Debug\
+    #git clone https://github.com/curl/curl.git -b curl-7_65_0 
+    #git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
+    #.\curl\projects\build-openssl.bat vc14.1 x64 debug .\openssl\ -perlpath C:\Strawberry
   displayName: 'install openssl'
     
 - script: |
