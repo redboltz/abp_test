@@ -30,7 +30,8 @@ steps:
     echo "---"
     set
   displayName: 'printenv'
-  
+
+# https://github.com/Azure/azure-storage-cpplite  
 - script: |
     git clone https://github.com/curl/curl.git -b curl-7_65_0 
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
