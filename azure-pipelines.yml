@@ -12,6 +12,8 @@ jobs:
     vmImage: 'vs2017-win2016'
   steps:
   - script: |
+      set VAL1="111"
+      set VAL2="222"
       echo %VAL1%
       echo %VAL2%
     displayName: 'print matrix1'
