@@ -9,7 +9,6 @@ trigger:
 pool:
   vmImage: 'vs2017-win2016'
 
-steps:
 - script: |
     echo %VAL1%
     echo %VAL2%
