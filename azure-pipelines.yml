@@ -6,6 +6,15 @@
 trigger:
 - master
 
+pool:
+  vmImage: 'vs2017-win2016'
+
+steps:
+- script: |
+    echo %VAL1%
+    echo %VAL2%
+  displayName: 'print matrix1'
+
 strategy:
   matrix:
     p1:
@@ -15,17 +24,11 @@ strategy:
        VAL1: "C"
        VAL2: "D"
 
-pool:
-  vmImage: 'vs2017-win2016'
-
 steps:
 - script: |
-    echo VAL1
-    echo VAL2
     echo %VAL1%
     echo %VAL2%
-  displayName: 'print matrix'
-
+  displayName: 'print matrix2'
 
 - script: |
     echo "---"
