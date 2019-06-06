@@ -6,53 +6,33 @@
 trigger:
 - master
 
-pool:
+jobs:
+- job:
+  pool:
   vmImage: 'vs2017-win2016'
+  steps:
+  - script: |
+      echo %VAL1%
+      echo %VAL2%
+    displayName: 'print matrix1'
 
-- script: |
-    echo %VAL1%
-    echo %VAL2%
-  displayName: 'print matrix1'
-
-strategy:
-  matrix:
-    p1:
-       VAL1: "A"
-       VAL2: "B"
-    p2:
-       VAL1: "C"
-       VAL2: "D"
-
-steps:
-- script: |
-    echo %VAL1%
-    echo %VAL2%
-  displayName: 'print matrix2'
-
-- script: |
-    echo "---"
-    DIR "C:\Program Files (x86)"
-    echo "---"
-    DIR "C:\Program Files (x86)\Microsoft Visual Studio\2017\"
-    echo "---"
-    DIR "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise"
-    echo "---"
-    DIR "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC"
-    echo "---"
-    DIR "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools"
-    echo "---"
-    DIR "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC"
-    echo "---"
-    DIR "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023"
-    echo "---"
-    DIR "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include"
-    echo "---"
-    set
-  displayName: 'printenv'
-
-- script: |	
-    mkdir build	
-    cd build	
-    cmake ..	
-    cmake --build . --config Release
-  displayName: 'cmake test'
+- job:
+  strategy:
+    matrix:
+      p1:
+         VAL1: "A"
+         VAL2: "B"
+      p2:
+         VAL1: "C"
+         VAL2: "D"
+  steps:
+  - script: |
+      echo %VAL1%
+      echo %VAL2%
+    displayName: 'print matrix2'
+  - script: |	
+      mkdir build	
+      cd build	
+      cmake ..	
+      cmake --build . --config Release
+    displayName: 'cmake test'
