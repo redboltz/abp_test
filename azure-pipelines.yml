@@ -12,6 +12,7 @@ jobs:
     vmImage: 'vs2017-win2016'
   steps:
   - script: |
+      DIR C:\Program Files\OpenSSL\
       set VAL1="111"
       set VAL2="222"
       echo %VAL1%
