@@ -12,6 +12,8 @@ jobs:
     vmImage: 'windows-2019'
   steps:
   - script: |
+      echo %BOOST_ROOT%
+      DIR %BOOST_ROOT%
       DIR "C:\Program Files\OpenSSL\"
       set VAL1="111"
       set VAL2="222"
