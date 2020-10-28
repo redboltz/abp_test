@@ -14,6 +14,7 @@ jobs:
   - script: |
       choco install boost-msvc-14.1
       type C:\ProgramData\chocolatey\logs\chocolatey.log
+      DIR C:\ProgramData\chocolatey\.chocolatey\boost-msvc-14.1.1.67.0
       echo %BOOST_ROOT_1_72_0%
       DIR %BOOST_ROOT_1_72_0%
       DIR "C:\Program Files\OpenSSL\"
