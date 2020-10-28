@@ -12,6 +12,7 @@ jobs:
     vmImage: 'windows-2019'
   steps:
   - script: |
+      choco install boost-msvc-14.1
       echo %BOOST_ROOT_1_72_0%
       DIR %BOOST_ROOT_1_72_0%
       DIR "C:\Program Files\OpenSSL\"
