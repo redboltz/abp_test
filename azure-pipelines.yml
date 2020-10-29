@@ -41,7 +41,7 @@ jobs:
   - script: |	
       mkdir build	
       cd build	
-      cmake -DMYFLAG1=%VAL1% -DMYFLAG1=%VAL2% ..	
+      cmake -DMYFLAG1=%VAL1% -DMYFLAG2=%VAL2% ..	
       cmake --build . --config Release
     displayName: 'cmake test'
 
